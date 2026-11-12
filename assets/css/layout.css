@@ -2,7 +2,7 @@
 
 *{
     margin: 0;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .navbar{
@@ -11,21 +11,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    
+    position: relative; 
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: var(--text-placeholder);
     div{
         margin: 0 100px;   
         padding: 20px;
     }
-
     .logo img{
         height: 60px;
     }
-
-    
-
+    .logo img:hover{
+        cursor: pointer;
+    }
     .buscador {
-
         position: relative;
 
         input{
@@ -36,12 +36,7 @@
             padding: 10px 40px;
             border: solid 1px var(--text-placeholder);
             border-radius: var(--radius-md) ;
-            
-            ::placeholder{
-                color: var(--text-placeholder);
-            }
         }
-
         i{
             font-size: 20px;
             color: white;
@@ -50,9 +45,10 @@
             top: 50%;
             transform: translateY(-50%)
         }
-
+        i:hover{
+            cursor: pointer;
+        }
     }
-
     .recursos{
         display: flex;
         gap: 20px;
@@ -64,12 +60,52 @@
             border: currentColor;
             border-radius: var(--radius-md);
             padding: 0 25px;
+            font-size: var(--font-size-xl);
         }
-
+        button:hover{
+            cursor: pointer;
+        }
         .perfil{
             width: 50px;
         }
-    }
-    
+        .perfil:hover{
+            cursor: pointer;
+        }
+    }   
 }
 
+.menu-lateral{
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    background-color: var(--bg-hover);
+    display: block;
+    border: solid 1px var(--text-placeholder);
+    border-left: none;
+    
+    
+    color: var(--text-main);
+
+    button{
+        color: var(--text-main);
+        width: 100%;
+        height: 8%;
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 1px var(--bg-secondary);
+        font-size: var(--font-size-xl);
+        text-align: start;
+        padding-left: 30px;
+    
+    }
+    button:hover{
+        background-color: var(--accent-primary);
+        cursor: pointer;
+    }
+
+    .estadisticas{
+        margin: 30px 15px;
+        font-size: var(--font-size-xl);        
+    }
+
+}
