@@ -1,0 +1,75 @@
+@import url('variables.css');
+
+*{
+    margin: 0;
+    
+}
+
+.navbar{
+    margin: 0;
+    background-color: var(--bg-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+    div{
+        margin: 0 100px;   
+        padding: 20px;
+    }
+
+    .logo img{
+        height: 60px;
+    }
+
+    
+
+    .buscador {
+
+        position: relative;
+
+        input{
+            font-size: var(--font-size-xl);
+            background-color: var(--bg-hover);
+            color: var(--text-main);
+            width: 500px;
+            padding: 10px 40px;
+            border: solid 1px var(--text-placeholder);
+            border-radius: var(--radius-md) ;
+            
+            ::placeholder{
+                color: var(--text-placeholder);
+            }
+        }
+
+        i{
+            font-size: 20px;
+            color: white;
+            position: absolute;
+            left: 28px;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+
+    }
+
+    .recursos{
+        display: flex;
+        gap: 20px;
+
+        button{
+            background-color: var(--accent-primary);
+            font-size: var( --font-size-xl);
+            color: var(--text-main);
+            border: currentColor;
+            border-radius: var(--radius-md);
+            padding: 0 25px;
+        }
+
+        .perfil{
+            width: 50px;
+        }
+    }
+    
+}
+
