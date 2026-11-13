@@ -53,11 +53,8 @@ export const initialResources = [
 
 
 export function cargarDatos(initialResources){
-    if(localStorage.length == 0){
-        initialResources.forEach((resource) => {  
-            localStorage.setItem(`resource${resource.id}`, JSON.stringify(resource))
-        });
-
+    if(localStorage.length == 0){ 
+      localStorage.setItem('resources', JSON.stringify(initialResources))
     }else console.log("El localStorage ya tiene datos")
 }
 
