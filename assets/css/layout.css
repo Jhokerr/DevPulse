@@ -2,8 +2,9 @@
 
 *{
     margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
 
 .navbar{
     margin: 0;
@@ -52,7 +53,7 @@
     .recursos{
         display: flex;
         gap: 20px;
-
+        
         button{
             background-color: var(--accent-primary);
             font-size: var( --font-size-xl);
@@ -75,13 +76,12 @@
 }
 
 .menu-lateral{
-    position: absolute;
+    position: fixed;
     width: 15%;
     height: 100%;
     background-color: var(--bg-secondary);
     display: block;
-    border: solid 1px var(--text-placeholder);
-    border-left: none;
+    border-right: solid 1px var(--text-placeholder);
     color: var(--text-main);
     button{
         color: var(--text-main);
@@ -109,11 +109,104 @@
     background-color: var(--bg-hover);
     position: absolute;
     right: 7%;
-    margin: 20px;
+    margin-top: 2%;
     padding: 10px 20px;
     color: var(--text-placeholder);
     display: flex;
     gap: 30px;
     column-rule: 2px solid var(--text-placeholder);
     border-radius: var(--radius-md);
+}
+
+.titulo{
+    position: absolute;
+    margin-top: 2%;
+    left: 17%;
+    color: var(--text-main)
+}
+
+.cards{
+    position: absolute;
+    width: 80%;
+    left: 17%;
+    margin-top: 6%;
+    color: var(--text-main);
+    display: flex;
+    flex-flow: row wrap;
+
+    .card{
+        background-color: var(--bg-secondary);
+        width: 20%;
+        height: 20%;
+        border: solid 2px var(--bg-hover);
+        border-radius: var(--radius-lg);
+        margin: 1%;
+        
+        .info{    
+            display: flex;
+            flex-flow: row wrap;
+            gap: 15px;
+            padding: 6%;
+            border-bottom: solid 2px var(--bg-hover);
+            padding-bottom: 10%;
+            .icon{
+                background-color: yellow;
+                width: 30px;
+                height: 30px;
+                border-radius: var(--radius-md);
+            }
+
+            label{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-top: 1%;
+                font-size: var(--font-size-lg);
+            }
+
+
+            .tags{ 
+                width: 100%;
+                display: flex;
+                flex-flow: row wrap;
+                gap: 5px;
+                .tag{
+                    font-size: var(--font-size-lg);
+                    color: var(--text-main);
+                    margin-top: 3%;
+                    padding: 3%;
+                    background-color: var(--bg-input);
+                    border-radius: var(--radius-sm);
+                    border-style: none;
+                }
+            }
+
+        }
+        .interac{
+            display: flex;
+            flex-flow: row wrap;
+            gap: 20px;
+            
+            padding: 6%;
+            color: var(--border-focus);
+            justify-content: space-between;
+            div{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: var(--font-size-xl);
+                a{
+                    text-decoration: none;
+                    color: var(--border-focus);
+                }
+                p{
+                    color: var(--text-main); 
+                }
+            }
+            
+            
+
+        }
+        
+    }
 }
