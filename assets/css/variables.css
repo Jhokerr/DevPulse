@@ -15,7 +15,7 @@
   /* Colores de Acento y Marca */
   --accent-primary: #6366f1;   /* Indigo principal (botones principales, highlights) */
   --accent-hover: #4f46e5;     /* Hover para acciones principales */
-  --accent-soft: rgba(99, 102, 241, 0.15); /* Fondo suave para badges/tags */
+  --accent-soft: rgba(0, 0, 8, 0.75); /* Fondo suave para badges/tags */
 
   /* Colores de Texto */
   --text-main: #f8fafc;        /* Texto principal (alta legibilidad) */

@@ -9,6 +9,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
+
+    <div class="hidden modal">
+        <div class="container">
+            <div class="titulo">
+                <h3>Añadir Nuevo Recurso</h3>
+                <i class="fa-solid fa-x quitar-modal"></i>
+            </div>
+            <form action="" class="formulario">
+                <div class="inputs">
+                        <label for="">Titulo (ej. Tailwind CSS)</label>
+                        <input type="text" class="input-titulo" placeholder="Tailwind CSS">
+                        <label for="">URL (ej. tailwindcss.com)</label>
+                        <input type="text" class="input-url" placeholder="tailwindcss.com">
+                        <label for="">Categoría</label>
+                        <select name="" id="" class="input-categoria">
+                            <option value="frontend">FrontEnd</option>
+                            <option value="backend">BackEnd</option>
+                            <option value="herramientas">Herramientas</option>
+                            <option value="devops">DevOps</option>
+                        </select>
+                        <label for="">etiquetas (separadas por comas)</label>
+                        <input type="text" class="input-etiquetas" placeholder="CSS, UI, Styles">
+                        <label for="">Descripción</label>
+                        <textarea name="" class="input-descripcion" id="" placeholder="Framework de clases utilitarias para diseñar interfaces modernas..."></textarea> 
+                        <label class="contador" for="">0/500</label>
+                </div>
+                <div class="botones">
+                    <button class="boton-cancelar" type="reset">Cancelar</button>
+                    <button class="boton-publicar" type="submit">Publicar Recurso</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <header class="navbar">
         <div class="logo">
             <img src="/assets/images/logo.png" alt="logo">
@@ -36,15 +70,24 @@
         </div>
     </nav>
 
-    <div class="filtros">
-        <span>Todos</span>
-        <span>Más Votados</span>
-        <span>Recientes</span>
-    </div>
-    <h1 class="titulo">Resource Grid</h1>
-    <article class="cards">
-                
-    </article>
+    <main class="contenedor-principal">
+        <div class="cabecera-contenido">
+            <h1 class="titulo-pagina">Resource Grid</h1>
+            <div class="filtros">
+                <span>Todos</span>
+                <span>Más Votados</span>
+                <span>Recientes</span>
+            </div>
+        </div>
+        
+        <article class="cards"></article>
+    </main>
+    
+
+    
+    
+
+    
   
     
     
