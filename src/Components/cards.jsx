@@ -1,3 +1,9 @@
+import Card from './card';
+import './styles/cards.css'
+
+/* Cargar los datos recursos iniciales al localStorage  */
+
+
 export const initialResources = [
   {
     id: "1",
@@ -52,7 +58,7 @@ export const initialResources = [
 ];
 
 
-export function cargarDatos(initialResources){
+export function insertarResources(initialResources){
     if(localStorage.length == 0){ 
       initialResources.forEach(resource => {
         localStorage.setItem(`resource${resource.id}`, JSON.stringify(resource))
@@ -61,4 +67,53 @@ export function cargarDatos(initialResources){
     }else console.log("El localStorage ya tiene datos")
 }
 
-cargarDatos(initialResources)
+insertarResources(initialResources)
+
+
+/* Pintar los Recusos iniciales en Cards  */
+
+
+
+export function recuperarResources(){
+    let lista = []
+    for (let i = 1; i <= localStorage.length; i++){
+        let recurso = JSON.parse(localStorage.getItem('resource' + i))
+        let resource = 
+            <Cards 
+                key = {recurso.id} 
+                titulo = {recurso.title}  
+                description = {recurso.description}
+                url = {recurso.url}
+                tags = {recurso.tags}
+                likes = {recurso.likes}
+            />
+        lista.push(resource)  
+    }
+    
+    return lista
+}
+
+
+
+
+export default function Cards(){
+    let lista = recuperarResources()
+    // lista.forEach(recurso => {
+    //     console.log(recurso.props.description)
+    // })
+    return(
+        <article className="cards">
+            {lista.map((recurso) => (
+                <Card 
+                    key= {recurso.key} 
+                    titulo = {recurso.props.titulo}  
+                    descripcion = {recurso.props.description}
+                    url = {recurso.props.url}
+                    tags = {recurso.props.tags}
+                    likes = {recurso.props.likes} 
+                />
+            ) )}
+        </article>
+        
+    )
+}

@@ -1,0 +1,37 @@
+@import url(./variables.css);
+
+.contenedor-principal{
+    margin-top: 80px;
+    margin-left: 15%;
+    padding: 50px;
+
+    .cabecera-contenido {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .titulo-pagina{
+        color: var(--text-main)
+    }
+
+    .filtros{
+        background-color: var(--bg-hover);
+        padding: 10px 20px;
+        color: var(--text-placeholder);
+        display: flex;
+        gap: 30px;
+        column-rule: 2px solid var(--text-placeholder);
+        border-radius: var(--radius-md);
+    }
+}
+
+.cards{
+    width: 100%;
+    color: var(--text-main);
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+}
+

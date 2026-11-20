@@ -1,0 +1,10 @@
+@import url(./variables.css);
+
+.cards{
+    width: 100%;
+    color: var(--text-main);
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+}
+
