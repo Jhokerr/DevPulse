@@ -6,7 +6,7 @@ export default function Header({isHidden, cambiarIsHidden}){
     return(
         <header className="navbar">
             <div className="logo">
-                <img src="/assets/images/logo.png" alt="logo" />
+                <img src="./src/assets/images/logo.png" alt="logo" />
             </div>
             <div className="buscador">
                 <i className="fa-solid fa-magnifying-glass"></i>
@@ -19,7 +19,7 @@ export default function Header({isHidden, cambiarIsHidden}){
                 >
                     <i className="fa-solid fa-plus"></i> Crear Recurso
                 </button>
-                <img className="perfil" src="/assets/images/avatar.webp" alt="imgPerfil" />
+                <img className="perfil" src="./src/assets/images/avatar.webp" alt="imgPerfil" />
             </div> 
         </header>
     )
